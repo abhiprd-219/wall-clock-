@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id = "conteiner">
+            <div id = "hour"></div>
+            <div id = "minute"></div>
+            <div id = "second"></div>
+            <div id = "center"></div>
+        </div>
+        <script>
+            var s1 = document.getElementById("hour");
+            var s2 = document.getElementById("minute");
+            var s3 = document.getElementById("second");
+            setInterval(() => {
+                var day = new Date();
+            var hr = day.getHours()*30;
+            var min = day.getMinutes();
+            var sec = day.getSeconds();
+            var hrc = hr+(min/2);
+            var minc = min*6;
+            var secc = sec*6;
+            s1.style.transform = "rotate("+hrc+"deg)";
+            s2.style.transform = "rotate("+minc+"deg)";
+            s3.style.transform = "rotate("+secc+"deg)";;
+            })
+        </script>
+    </body>
+</html>
